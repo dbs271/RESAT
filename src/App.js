@@ -1,10 +1,15 @@
 import "./App.css";
+import Timer from "./pages/timer/Timer";
 
 function App() {
   return (
-    <div>
-      <h1>RESAT CHALLENGE for React</h1>
-    </div>
+    <>
+      <h1 className="title">RESAT CHALLENGE</h1>
+      <div className="day">
+        <h2>Day 1</h2>
+        <Timer />
+      </div>
+    </>
   );
 }
 
