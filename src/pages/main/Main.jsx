@@ -9,6 +9,10 @@ const Main = () => {
         <h2>Day 1</h2>
         <Link to={"/day1"}>CountDown Timer</Link>
       </div>
+      <div className="day">
+        <h2>Day 2</h2>
+        <Link to={"/day2"}>TodoList</Link>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Main from "../pages/main/Main";
 import Timer from "../pages/timer/Timer";
+import Todo from "../pages/todo/Todo";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/day1",
         element: <Timer />,
+      },
+      {
+        path: "/day2",
+        element: <Todo />,
       },
     ],
   },
