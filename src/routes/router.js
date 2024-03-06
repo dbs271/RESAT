@@ -13,11 +13,11 @@ const router = createBrowserRouter([
         element: <Main />,
       },
       {
-        path: "/day1",
+        path: "/resat/day1",
         element: <Timer />,
       },
       {
-        path: "/day2",
+        path: "/resat/day2",
         element: <Todo />,
       },
     ],
