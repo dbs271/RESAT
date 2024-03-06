@@ -40,6 +40,10 @@ const Todo = () => {
     setFilter(filter);
   };
 
+  const handleDeleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   const filteredTodos = todos.filter((todo) => {
     if (filter === "전체") {
       return true;
@@ -100,6 +104,7 @@ const Todo = () => {
               />
               <span>{todo.text}</span>
               <span className="priority">[{todo.priority}]</span>
+              <button onClick={() => handleDeleteTodo(todo.id)}>삭제</button>
             </div>
           ))}
         </div>
