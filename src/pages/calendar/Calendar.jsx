@@ -9,6 +9,14 @@ const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [memo, setMemo] = useState(false);
+  const [memos, setMemos] = useState({});
+
+  const saveMemo = (date, memo) => {
+    setMemos((prevMemos) => ({
+      ...prevMemos,
+      [date]: memo,
+    }));
+  };
 
   const prevMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
@@ -48,6 +56,8 @@ const Calendar = () => {
         selectedDate={selectedDate}
         memo={memo}
         setMemo={setMemo}
+        memos={memos}
+        saveMemo={saveMemo}
       />
     </div>
   );

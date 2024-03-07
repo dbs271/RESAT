@@ -10,7 +10,6 @@ import {
 } from "date-fns";
 import "./style.css";
 import React from "react";
-import { useState } from "react";
 import Memo from "./Memo";
 
 const Body = ({
@@ -19,6 +18,8 @@ const Body = ({
   currentMonth,
   memo,
   setMemo,
+  memos,
+  saveMemo,
 }) => {
   const startMonth = startOfMonth(currentMonth);
   const endMonth = endOfMonth(startMonth);
@@ -55,7 +56,20 @@ const Body = ({
           }`}
           onClick={() => handledateClick(format(cloneDay, "yyyy-MM-dd"))}
         >
-          <span>{formattedDate}</span>
+          {memos[format(cloneDay, "yyyy-MM-dd")] && (
+            <div
+              style={{
+                border: "1px solid #588CDF",
+                borderRadius: "50%",
+                width: "20px",
+                height: "20px",
+                background: "#588CDF",
+                position: "absolute",
+                marginTop: "2px",
+              }}
+            ></div>
+          )}
+          <span style={{ position: "relative" }}>{formattedDate}</span>
         </div>
       );
       day = addDays(day, 1);
@@ -84,7 +98,15 @@ const Body = ({
       }}
     >
       {rows}
-      {memo && <Memo selectedDate={selectedDate} />}
+      {memo && (
+        <Memo
+          selectedDate={selectedDate}
+          memos={memos}
+          saveMemo={saveMemo}
+          setMemo={setMemo}
+          memo={memo}
+        />
+      )}
     </div>
   );
 };
