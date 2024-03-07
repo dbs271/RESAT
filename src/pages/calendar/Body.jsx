@@ -5,14 +5,21 @@ import {
   format,
   isSameDay,
   isSameMonth,
-  parse,
   startOfMonth,
   startOfWeek,
 } from "date-fns";
 import "./style.css";
 import React from "react";
+import { useState } from "react";
+import Memo from "./Memo";
 
-const Body = ({ handledateClick, selectedDate, currentMonth }) => {
+const Body = ({
+  handledateClick,
+  selectedDate,
+  currentMonth,
+  memo,
+  setMemo,
+}) => {
   const startMonth = startOfMonth(currentMonth);
   const endMonth = endOfMonth(startMonth);
   const startDate = startOfWeek(startMonth);
@@ -46,7 +53,7 @@ const Body = ({ handledateClick, selectedDate, currentMonth }) => {
               ? "not-valid"
               : "valid"
           }`}
-          onClick={() => handledateClick(parse(cloneDay))}
+          onClick={() => handledateClick(format(cloneDay, "yyyy-MM-dd"))}
         >
           <span>{formattedDate}</span>
         </div>
@@ -73,9 +80,11 @@ const Body = ({ handledateClick, selectedDate, currentMonth }) => {
         width: "700px",
         display: "flex",
         flexDirection: "column",
+        position: "relative",
       }}
     >
       {rows}
+      {memo && <Memo selectedDate={selectedDate} />}
     </div>
   );
 };

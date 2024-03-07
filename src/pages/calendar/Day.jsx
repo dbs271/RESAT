@@ -13,6 +13,7 @@ const Day = () => {
           height: "20px",
           background: "rgba(122, 238, 190, 0.5)",
         }}
+        key={i}
       >
         {date[i]}
       </div>

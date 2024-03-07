@@ -8,6 +8,7 @@ import Header from "./Header";
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [memo, setMemo] = useState(false);
 
   const prevMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
@@ -19,6 +20,7 @@ const Calendar = () => {
 
   const handledateClick = (day) => {
     setSelectedDate(day);
+    setMemo(!memo);
   };
 
   return (
@@ -44,6 +46,8 @@ const Calendar = () => {
         handledateClick={handledateClick}
         currentMonth={currentMonth}
         selectedDate={selectedDate}
+        memo={memo}
+        setMemo={setMemo}
       />
     </div>
   );
