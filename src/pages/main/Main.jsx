@@ -13,6 +13,10 @@ const Main = () => {
         <h2>Day 2</h2>
         <Link to={"/resat/day2"}>TodoList</Link>
       </div>
+      <div className="day">
+        <h2>Day 3</h2>
+        <Link to={"/resat/day3"}>calendar</Link>
+      </div>
     </div>
   );
 };
