@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Calendar from "../pages/calendar/Calendar";
+import Carousel from "../pages/carousel/Carousel";
 import Main from "../pages/main/Main";
 import Timer from "../pages/timer/Timer";
 import Todo from "../pages/todo/Todo";
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/resat/day3",
         element: <Calendar />,
+      },
+      {
+        path: "/resat/day5",
+        element: <Carousel />,
       },
     ],
   },
