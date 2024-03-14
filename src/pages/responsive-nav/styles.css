@@ -1,0 +1,53 @@
+.con {
+  width: 100%;
+  height: 65px;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+  font-weight: bold;
+  background: #7aeebe;
+  gap: 50px;
+}
+
+@media (min-width: 820px) {
+  .box2,
+  .icon,
+  .item2 {
+    display: none;
+    list-style: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .item {
+    display: none;
+  }
+  .item2 {
+    display: inline;
+  }
+  .icon {
+    display: block;
+    position: absolute;
+    right: 50px;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  .box2 {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 350px;
+    background-color: #7aeebe;
+    list-style: none;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+  }
+}

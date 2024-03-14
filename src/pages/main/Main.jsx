@@ -25,6 +25,10 @@ const Main = () => {
         <h2>day 7 </h2>
         <Link to={"/resat/day6"}>carousel2</Link>
       </div>
+      <div className="day">
+        <h2>day 9</h2>
+        <Link to={"/resat/day7"}>responsive Nav</Link>
+      </div>
     </div>
   );
 };
