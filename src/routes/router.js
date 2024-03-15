@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Calendar from "../pages/calendar/Calendar";
 import Carousel from "../pages/carousel/Carousel";
 import Carousel2 from "../pages/carousel2/carousel2";
+import Login from "../pages/login/Login";
 import Main from "../pages/main/Main";
 import Nav from "../pages/responsive-nav/Nav";
 import Timer from "../pages/timer/Timer";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/resat/day7",
         element: <Nav />,
+      },
+      {
+        path: "/resat/day8",
+        element: <Login />,
       },
     ],
   },

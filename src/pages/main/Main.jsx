@@ -29,6 +29,10 @@ const Main = () => {
         <h2>day 9</h2>
         <Link to={"/resat/day7"}>responsive Nav</Link>
       </div>
+      <div className="day">
+        <h2>day 10</h2>
+        <Link to={"/resat/day8"}>Login</Link>
+      </div>
     </div>
   );
 };
